@@ -1,4 +1,4 @@
-version: '2'
+version: "3.9"
 
 services:
   dynamo:
@@ -10,12 +10,8 @@ services:
   rom:
     build:
       context: .
-      dockerfile: Dockerfile.development
+      dockerfile: Dockerfile
     command: rspec
     environment:
       - DYNAMO_ENDPOINT=http://dynamo:8000
       - CI
-    volumes:
-      - .:/app
-    links:
-      - dynamo
