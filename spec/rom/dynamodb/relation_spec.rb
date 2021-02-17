@@ -1,6 +1,6 @@
 module ROM
   describe 'Key: { host<HASH>, logged_at<RANGE> } table' do
-    include_context 'dynamo'
+    include_context 'dynamodb'
 
     let(:sequence_step) { 60 }
 
@@ -206,7 +206,7 @@ module ROM
   end
 
   describe 'Key: { id<HASH> } table' do
-    include_context 'dynamo'
+    include_context 'dynamodb'
 
     let(:descriptor) { :users }
 

@@ -1,6 +1,6 @@
 module ROM
   describe 'commands' do
-    include_context 'dynamo'
+    include_context 'dynamodb'
 
     let(:descriptor) { :users }
 

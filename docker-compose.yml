@@ -11,5 +11,5 @@ services:
       dockerfile: Dockerfile
     command: rspec
     environment:
-      - DYNAMO_ENDPOINT=http://dynamo:8000
+      - DYNAMODB_ENDPOINT=http://dynamodb:8000
       - CI
