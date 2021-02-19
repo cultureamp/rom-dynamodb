@@ -1,9 +1,6 @@
 # ROM DynamoDB Adapter
  [![Gem Version](https://badge.fury.io/rb/rom-dynamodb.svg)](https://badge.fury.io/rb/rom-dynamodb) [![GitHub](https://img.shields.io/badge/github-davidkelley%2From--dynamo-blue.svg)](https://github.com/davidkelley/rom-dynamodb) [![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/github/davidkelley/rom-dynamodb) [![License](http://img.shields.io/badge/license-MIT-yellowgreen.svg)](#license)  [![Gitter](http://img.shields.io/badge/gitter-rom--rb-red.svg)](https://gitter.im/rom-rb/chat)
 
- [![Code Climate](https://codeclimate.com/github/davidkelley/rom-dynamodb/badges/gpa.svg)](https://codeclimate.com/github/davidkelley/rom-dynamodb) [![Coverage Status](https://coveralls.io/repos/github/davidkelley/rom-dynamodb/badge.svg?branch=master)](https://coveralls.io/github/davidkelley/rom-dynamodb?branch=master) [![Dependency Status](https://gemnasium.com/badges/github.com/davidkelley/rom-dynamodb.svg)](https://gemnasium.com/github.com/davidkelley/rom-dynamodb)
- [![Build Status](https://travis-ci.org/davidkelley/rom-dynamodb.svg?branch=master)](https://travis-ci.org/davidkelley/rom-dynamodb) [![Inline docs](http://inch-ci.org/github/davidkelley/rom-dynamodb.svg?branch=master)](http://inch-ci.org/github/davidkelley/rom-dynamodb)
-
 ---
 
 This adapter uses [ROM (>= 2.0.0)](http://rom-rb.org/) to provide an easy-to-use, clean and understandable interface for [AWS DynamoDB](https://aws.amazon.com/documentation/dynamodb/).

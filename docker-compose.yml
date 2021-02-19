@@ -15,11 +15,6 @@ services:
     environment:
       - DYNAMO_ENDPOINT=http://dynamo:8000
       - CI
-      - TRAVIS
-      - TRAVIS_BRANCH
-      - TRAVIS_JOB_ID
-      - TRAVIS_PULL_REQUEST
-      - CODECLIMATE_REPO_TOKEN
     volumes:
       - .:/app
     links:
