@@ -291,6 +291,10 @@ module ROM
         each_item(build, &block)
       end
 
+      def map(&block)
+        each_item(build).map(&block)
+      end
+
       def connection
         @connection ||= Aws::DynamoDB::Client.new(config)
       end
@@ -318,7 +322,7 @@ module ROM
       def each_item(body, &block)
         case operation
         when :get_item
-          block.call execute(body).item
+          [execute(body).item].each(&block)
         when :batch_get
           execute(body).responses[name.to_s].each(&block)
         else
@@ -333,7 +337,7 @@ module ROM
         end
         if result
           args = { name: name, config: config, operation: operation }
-          self.class.new(args.merge(queries: queries + [result].flatten))
+          self.class.new(**args.merge(queries: queries + [result].flatten))
         else
           self
         end

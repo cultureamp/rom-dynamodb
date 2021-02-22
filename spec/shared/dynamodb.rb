@@ -1,19 +1,19 @@
-shared_context 'dynamo' do
+shared_context 'dynamodb' do
   let(:table) { fail_on_missing_definition(:table) }
 
   let(:credentials) { credentials }
 
   around { |ex| create_table_and_wait(table, &ex) }
 
-  def dynamo
+  def dynamodb
     Aws::DynamoDB::Client.new(credentials)
   end
 
   def create_table_and_wait(table, &block)
-    dynamo.create_table(table)
-    dynamo.wait_until(:table_exists, table_name: table[:table_name])
+    dynamodb.create_table(table)
+    dynamodb.wait_until(:table_exists, table_name: table[:table_name])
     block.call
-    dynamo.delete_table(table_name: table[:table_name])
+    dynamodb.delete_table(table_name: table[:table_name])
   end
 
   def credentials
@@ -21,11 +21,11 @@ shared_context 'dynamo' do
       region: 'us-east-1',
       access_key_id: 'xxx',
       secret_access_key: 'xxx',
-      endpoint: ENV['DYNAMO_ENDPOINT']
+      endpoint: ENV['DYNAMODB_ENDPOINT']
     }
   end
 
   def fail_on_missing_definition(key)
-    fail "let(:#{key}) definition required to use dynamo context"
+    fail "let(:#{key}) definition required to use dynamodb context"
   end
 end

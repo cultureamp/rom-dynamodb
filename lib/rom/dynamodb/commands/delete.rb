@@ -1,3 +1,5 @@
+require "rom/commands/delete"
+
 module ROM
   module DynamoDB
     module Commands

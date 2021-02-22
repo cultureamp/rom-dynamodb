@@ -1,3 +1,5 @@
+require "rom/relation"
+
 module ROM
   module DynamoDB
     # Extending the relation class allows you to build in custom queries

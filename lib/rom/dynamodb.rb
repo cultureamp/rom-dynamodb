@@ -1,5 +1,5 @@
-require 'rom'
-require 'aws-sdk-core'
+require 'rom-core'
+require 'aws-sdk-dynamodb'
 require 'deep_merge'
 
 require 'rom/dynamodb/functions'

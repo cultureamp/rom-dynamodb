@@ -1,6 +1,6 @@
 module ROM
   describe 'Key: { host<HASH>, logged_at<RANGE> } table' do
-    include_context 'dynamo'
+    include_context 'dynamodb'
 
     let(:sequence_step) { 60 }
 
@@ -50,7 +50,7 @@ module ROM
       end
     }
 
-    subject(:relation) { container.relation(descriptor) }
+    subject(:relation) { container.relations[descriptor] }
 
     before { container.commands[descriptor][:create].call(logs) }
 
@@ -206,7 +206,7 @@ module ROM
   end
 
   describe 'Key: { id<HASH> } table' do
-    include_context 'dynamo'
+    include_context 'dynamodb'
 
     let(:descriptor) { :users }
 
@@ -236,7 +236,7 @@ module ROM
       end
     }
 
-    subject(:relation) { container.relation(descriptor) }
+    subject(:relation) { container.relations[descriptor] }
 
     before { container.commands[descriptor][:create].call(users) }
 

@@ -1,3 +1,5 @@
+require "rom/commands/update"
+
 module ROM
   module DynamoDB
     module Commands

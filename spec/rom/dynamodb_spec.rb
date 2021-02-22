@@ -1,6 +1,6 @@
 module ROM
   describe DynamoDB do
-    include_context 'dynamo'
+    include_context 'dynamodb'
 
     let(:table) { build(:table) }
 
