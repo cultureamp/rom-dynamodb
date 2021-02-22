@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "yard", "~> 0.9"
   spec.add_development_dependency "redcarpet", "~> 3.4"
   spec.add_development_dependency "factory_girl", "~> 4.5"
+  spec.add_development_dependency "simplecov", "~> 0.21"
 end
