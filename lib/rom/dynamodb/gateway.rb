@@ -1,3 +1,5 @@
+require "rom/gateway"
+
 module ROM
   module DynamoDB
     class Gateway < ROM::Gateway

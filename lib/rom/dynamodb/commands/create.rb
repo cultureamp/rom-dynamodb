@@ -1,3 +1,5 @@
+require "rom/commands/create"
+
 module ROM
   module DynamoDB
     module Commands
